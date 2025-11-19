@@ -40,7 +40,7 @@
 
 ## 📦 Installation
  
-1. **Clone the repo** ```bash git clone https://github.com/your-username/random-cocktail-suggester.git cd random-cocktail-suggester ```
+1. **Clone the repo** ```bash git clone https://github.com/Giwrgos41/random-cocktail-suggester.git cd random-cocktail-suggester ```
   
 2. **Install dependencies** ```bash npm install ``` 
 
