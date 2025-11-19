@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= name %> - Cocktail Suggester App</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1><%= name %></h1>
+    <img src="<%= image %>" alt="<%= name %>" />
+    <h2>Ingredients</h2>
+    <ul>
+      <% ingredients.forEach(item => { %>
+        <li><%= item %></li>
+      <% }) %>
+    </ul>
+    <h2>Instructions</h2>
+    <p><%= instructions %></p>
+    <a href="/cocktail"><button>Show another</button></a>
+  </div>
+
+  <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
+  <script>
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    }
+
+    // Load saved theme
+    window.onload = () => {
+        if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        }
+    }
+   </script>
+</body>
+</html>

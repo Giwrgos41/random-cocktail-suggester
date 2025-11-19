@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cocktail Suggester App</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Cocktail Suggester 🍸</h1>
+    <p>Press the button below to discover a random cocktail!</p>
+    <a href="/cocktail"><button>Show me a cocktail</button></a>
+  </div>
+
+  <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
+  <script>
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    }
+
+    // Load saved theme
+    window.onload = () => {
+        if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        }
+    }
+   </script>
+</body>
+</html>
